@@ -2,7 +2,9 @@ import React, { useState, useEffect }from "react";
 import Gif from "./Gif";
 import { getGifsBySearch } from '../services/gifsService'
 
-const ListOfGifs = ({ keyword = 'panda' } = {}) => {
+const ListOfGifs = ({ params }) => {
+  const {keyword} = params 
+
   const [gifs, setGifs] = useState([])
   
   useEffect(() => {

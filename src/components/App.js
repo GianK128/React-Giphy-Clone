@@ -1,11 +1,12 @@
 import React from 'react'
 import './App.css'
 import ListOfGifs from './ListOfGifs'
+import { Route } from 'wouter'
 
 function App() {
   return (
     <div className='App'>
-      <ListOfGifs keyword='Programming' />
+      <Route path='/gifs/:keyword' component={ListOfGifs}/>
     </div>
   );
 }
