@@ -11,7 +11,11 @@ function App() {
 
   return (
     <div className='App'>
-      {gifs.map(gif => <img key={gif} src={gif} alt='Gif' />)}
+      {gifs.map(gif => {return <>
+        <h3>{gif.title}</h3>
+        <img key={gif.id} src={gif.url} alt='Gif' />
+      </>}
+      )}
     </div>
   );
 }
