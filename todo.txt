@@ -1,0 +1,10 @@
+# TODO
+- Gif search
+- Look individual Gif
+- Landing page with trendings
+
+- User accounts
+- Gif upload
+
+- Set up express backend
+- Consume Giphy API in backend
