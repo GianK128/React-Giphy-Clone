@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getGifsBySearch } from '../services/gifsService'
 import './App.css'
+import Gif from './Gif'
 
 function App() {
   const [gifs, setGifs] = useState([])
@@ -11,10 +12,13 @@ function App() {
 
   return (
     <div className='App'>
-      {gifs.map(gif => {return <>
-        <h3>{gif.title}</h3>
-        <img key={gif.id} src={gif.url} alt='Gif' />
-      </>}
+      {gifs.map(gif => 
+        <Gif 
+          key={gif.id}
+          id={gif.id}
+          title={gif.title}
+          url={gif.url}
+        />
       )}
     </div>
   );
