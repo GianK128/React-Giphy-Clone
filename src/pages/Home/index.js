@@ -5,6 +5,8 @@ export default function Home() {
     const [keyword, setKeyword] = useState('')
     const [location, pushLocation] = useLocation()
     
+    console.log(location)
+
     const HandleChange = () => (event) => {
         setKeyword(event.target.value)
     }
@@ -12,7 +14,7 @@ export default function Home() {
     const HandleSubmit = () => (event) => {
         event.preventDefault()
         if (keyword !== '') {
-            pushLocation(`/gifs/${keyword}`)
+            pushLocation(`/search/${keyword}`)
         }
     }
 

@@ -11,8 +11,8 @@ function App() {
     <div className='App'>
       <section className="App-content">
         <Route path='/' component={Home} />
-        <Route path='/gifs/:keyword' component={SearchResults} />
-        <Route path='/gifs/:id' component={Details} />
+        <Route path='/search/:keyword' component={SearchResults} />
+        <Route path='/gif/:id' component={Details} />
       </section>
     </div>
   );
