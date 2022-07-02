@@ -1,15 +1,6 @@
-import React, { useState, useEffect } from "react";
 import Gif from "./Gif";
-import { getGifsBySearch } from '../services/gifsService'
 
-const ListOfGifs = ({ keyword }) => {
-  const [gifs, setGifs] = useState([])
-  
-  useEffect(() => {
-    getGifsBySearch({ keyword })
-      .then(newGifs => setGifs(newGifs))
-  }, [keyword])
-
+const ListOfGifs = ({ gifs }) => {
   return gifs.map(gif => 
     <Gif 
       key={gif.id}
