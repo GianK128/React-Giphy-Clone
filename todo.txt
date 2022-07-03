@@ -1,5 +1,4 @@
 # TODO
-- Gif search
 - Look individual Gif
 - Landing page with trendings
 
