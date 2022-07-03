@@ -9,7 +9,7 @@ body {
     background-color: #1b1b1b;
 }
 
-.App {
+.App-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
