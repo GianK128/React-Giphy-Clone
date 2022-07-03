@@ -1,4 +1,4 @@
-const apiKey = "X2cCUSzCUj4KOHDUZBkPTsnrTmzOVOia"
+const apiKey = `${process.env.REACT_APP_GIPHY_API_KEY}`
 const baseURL = "https://api.giphy.com/v1"
 
 const getGifsBySearch = ({ keyword = 'panda' } = {}) => {
