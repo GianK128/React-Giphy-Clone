@@ -1,9 +1,13 @@
 import { useState } from "react"
 import { useLocation } from "wouter"
+import ListOfGifs from "../../components/ListOfGifs"
+import Loader from "../../components/Loader"
+import useGifs from "../../hooks/useGifs"
 
 export default function Home() {
     const [keyword, setKeyword] = useState('')
     const [location, pushLocation] = useLocation()
+    const [loading, gifs] = useGifs()
     
     console.log(location)
 
@@ -24,5 +28,9 @@ export default function Home() {
         <form onSubmit={HandleSubmit()}>
             <input type='text' value={keyword} onChange={HandleChange()} />
         </form>
+        {loading
+            ? <Loader />
+            : <ListOfGifs gifs={gifs} />
+        }
     </>
 }
