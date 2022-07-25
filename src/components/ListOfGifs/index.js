@@ -1,4 +1,4 @@
-import Gif from "./Gif";
+import Gif from "../Gif";
 
 const ListOfGifs = ({ gifs }) => {
   return gifs.map(gif => 
