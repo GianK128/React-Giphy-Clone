@@ -4,6 +4,7 @@ const baseURL = "https://api.giphy.com/v1"
 const getTrendingTerms = () => {
   return fetch(`${baseURL}/trending/searches?api_key=${apiKey}`)
     .then(response => response.json())
+    .then(json => json.data)
 }
 
 export default getTrendingTerms
