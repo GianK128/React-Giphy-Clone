@@ -1,46 +1,11 @@
-import React, { useState, useEffect, useRef } from "react"
-import getTrendingTerms from "services/trendingTermsService"
-import Category from "components/Category"
-
-const TrendingSearches = () => {
-  const [trends, setTrends] = useState([])
-
-  useEffect(() => {
-    getTrendingTerms()
-      .then((data) => 
-        setTrends(data)
-      )
-  }, [])
-
-  return <Category name={'Tendencias'} options={trends} />
-}
+import React from "react"
+import TrendingSearches from "./TrendingSearches"
+import useNearScreen from "hooks/useNearScreen"
 
 const LazyTrendingSearches = () => {
-  const [isNearScreen, setNearScreen] = useState(false)
-  const elementRef = useRef()
+  const {isNearScreen, fromRef} = useNearScreen()
 
-  // Create observer only when first loading
-  useEffect(() => {
-    const onObserved = (entries, observer) => {
-      const element = entries[0]
-      console.log(element)
-      if (element.isIntersecting) {
-        setNearScreen(true)
-        observer.disconnect()
-      }
-    }
-    
-    // Observe element to be lazy-loaded
-    const observer = new IntersectionObserver(onObserved, {
-      rootMargin: '100px'
-    })
-    observer.observe(elementRef.current)
-
-    // Disconnect when de-rendering component
-    return () => observer && observer.disconnect()
-  })
-
-  return <div ref={elementRef}>
+  return <div ref={fromRef}>
     {isNearScreen ? <TrendingSearches /> : null}
   </div>
 }
