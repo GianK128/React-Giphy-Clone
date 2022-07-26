@@ -1,6 +1,6 @@
-import useGifs from "../../hooks/useGifs"
-import Loader from '../../components/Loader'
-import ListOfGifs from "../../components/ListOfGifs"
+import useGifs from "hooks/useGifs"
+import Loader from 'components/Loader'
+import ListOfGifs from "components/ListOfGifs"
 
 export default function SearchResults({ params }) {
     const { keyword } = params
