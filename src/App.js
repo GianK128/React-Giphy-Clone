@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css'
-import Home from './pages/Home'
-import SearchResults from './pages/SearchResults'
-import Details from './pages/Details'
-import { GifsContextProvider } from './context/GifsContext'
+import Home from 'pages/Home'
+import SearchResults from 'pages/SearchResults'
+import Details from 'pages/Details'
+import { GifsContextProvider } from 'context/GifsContext'
 
 import { Route } from 'wouter'
 

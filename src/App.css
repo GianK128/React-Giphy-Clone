@@ -9,6 +9,15 @@ body {
     background-color: #1b1b1b;
 }
 
+a {
+    color: #eee;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
 .App-content {
     display: flex;
     flex-direction: column;
