@@ -1,6 +1,7 @@
 # TODO
-- Look individual Gif
-- Landing page with trendings
+- Infinite scroll
+- Different content in Landing
+- Stylize pages
 
 - User accounts
 - Gif upload

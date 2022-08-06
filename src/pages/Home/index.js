@@ -8,7 +8,7 @@ import TrendingSearches from "components/TrendingSearches"
 export default function Home() {
     const [keyword, setKeyword] = useState('')
     const [location, pushLocation] = useLocation()
-    const [loading, gifs] = useGifs()
+    const {loading, gifs} = useGifs()
     
     console.log(location)
 
