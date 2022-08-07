@@ -1,7 +1,7 @@
 const apiKey = `${process.env.REACT_APP_GIPHY_API_KEY}`
 const baseURL = "https://api.giphy.com/v1"
 
-const getGifsBySearch = ({ keyword = 'panda', quantity = 10, page = 0 } = {}) => {
+const getGifsBySearch = ({ keyword = 'panda', quantity = 25, page = 0 } = {}) => {
   return fetch(`${baseURL}/gifs/search?api_key=${apiKey}&q=${keyword}&limit=${quantity}&offset=${page * quantity}&rating=G&lang=es`)
     .then(res => res.json())
     .then(response => {

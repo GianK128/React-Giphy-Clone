@@ -1,7 +1,8 @@
 # TODO
-- Infinite scroll
 - Different content in Landing
 - Stylize pages
+- Use gifscontext for SearchResults
+- Get gif by ID when context is empty
 
 - User accounts
 - Gif upload

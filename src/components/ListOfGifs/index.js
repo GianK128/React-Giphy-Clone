@@ -1,15 +1,16 @@
 import Gif from "components/Gif";
-import './ListOfGifs.css'
+import './styles.css'
 
 const ListOfGifs = ({ gifs }) => {
-  return <div className="App-ListOfGifs">
+  return <div className="ListOfGifs">
     {gifs.map(gif => 
-      <Gif 
-        key={gif.id}
-        id={gif.id}
-        title={gif.title}
-        url={gif.url}
-      />
+      <div className="ListOfGifs-item" key={gif.id}>
+        <Gif
+          id={gif.id}
+          title={gif.title}
+          url={gif.url}
+        />
+      </div>
     )}
   </div>
 }
