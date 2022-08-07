@@ -9,14 +9,11 @@
     width: 100%;
 }
 
-.Gif-title {
+.Gif h3 {
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: #0009;
-}
-
-.Gif-title h3 {
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 0.2em;
 }
 
