@@ -1,6 +1,7 @@
 import useGifs from "hooks/useGifs"
 import Loader from 'components/Loader'
 import ListOfGifs from "components/ListOfGifs"
+import './styles.css'
 
 export default function SearchResults({ params }) {
     const { keyword } = params
@@ -8,11 +9,11 @@ export default function SearchResults({ params }) {
 
     const handleClick = () => setPage(prevPage => prevPage + 1)
 
-    return <>
+    return <div className="SearchResults">
         {loading
             ? <Loader />
             : <ListOfGifs gifs={gifs} />
         }
         <button onClick={handleClick}>Next page</button>
-    </>
+    </div>
 }
