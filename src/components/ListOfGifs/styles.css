@@ -1,3 +1,14 @@
 .ListOfGifs {
+    display: grid;
     min-height: 110vh;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 1em;
+}
+
+.ListOfGifs-item {
+    display: inline-block;
+    width: 100%;
+    max-height: 300px;
 }

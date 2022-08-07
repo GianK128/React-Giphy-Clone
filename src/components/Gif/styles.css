@@ -1,0 +1,25 @@
+.Gif {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.Gif-title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #0009;
+}
+
+.Gif-title h3 {
+    padding: 0.2em;
+}
+
+.Gif img {
+    object-fit: cover;
+}
